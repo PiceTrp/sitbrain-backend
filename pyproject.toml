@@ -29,6 +29,9 @@ dependencies = [
   "mistralai>=1.9.2",
   "aiofiles>=24.1.0",
   "pre-commit>=4.2.0",
+  "gradio>=5.38.0",
+  "requests>=2.32.4",
+  "black>=25.1.0",
 ]
 
 [dependency-groups]
