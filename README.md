@@ -1,2 +1,3 @@
-# sitbrain-backend
-rag chatbot to answer question about IS Report - SIT KMUTT
+# sitbrain-engine
+
+uv run python -m uvicorn app.main:app --host 0.0.0.0 --port 8080

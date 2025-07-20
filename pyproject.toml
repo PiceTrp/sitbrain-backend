@@ -1,0 +1,38 @@
+[project]
+name = "sitbrain-backend"
+version = "0.1.0"
+description = "LangChain + Qdrant"
+authors = [
+  { name="Theerapat Niamhom", email="" }
+]
+requires-python = ">=3.12"
+
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "langchain",
+  "langchain-community",
+  "langchain-openai",
+  "langchain-google-genai",
+  "qdrant-client",
+  "openai",
+  "beautifulsoup4",
+  "html2text",
+  "python-docx",
+  "extract-msg",
+  "tiktoken",
+  "python-dotenv",
+  "pytest",
+  "google-genai>=1.26.0",
+  "pytest-asyncio>=1.1.0",
+  "python-multipart>=0.0.20",
+  "mistralai>=1.9.2",
+  "aiofiles>=24.1.0",
+  "pre-commit>=4.2.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "ruff>=0.12.4",
+]

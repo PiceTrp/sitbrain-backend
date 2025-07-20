@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:17  # Use a specific PostgreSQL version
+    container_name: local_pgdb
+    restart: "always"
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: simple-rag-db
+    ports:
+      - "5432:5432"  # Expose the PostgreSQL port
+    volumes:
+      - pgdata:/var/lib/postgresql/data  # Persist data
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    restart: always
+    container_name: qdrant
+    ports:
+      - 6333:6333
+      - 6334:6334
+    expose:
+      - 6333
+      - 6334
+      - 6335
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+volumes:
+  pgdata:
+  qdrant_data:
